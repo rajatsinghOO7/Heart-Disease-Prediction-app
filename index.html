@@ -1,0 +1,152 @@
+<html>
+<head>
+    <title>CHD Prediction</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            place-items: center;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+
+        }
+
+        .styled-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>CHD Prediction</h1>
+
+    <div class="container">
+        <form class="styled-form" method="POST" action="/">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age"><br>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" id="sex" name="sex" placeholder="1-> female  0-> male"><br>
+            </div>
+            <div class="form-group">
+                <label for="cp">Chest Pain Type (cp):</label>
+                <input type="text" id="cp" name="cp"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="trestbps">Resting Blood Pressure (trestbps):</label>
+                <input type="text" id="trestbps" name="trestbps"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="chol">Serum Cholesterol (chol):</label>
+                <input type="text" id="chol" name="chol"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="fbs">Fasting Blood Sugar > 120 mg/dl (fbs):</label>
+                <input type="text" id="fbs" name="fbs"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="restecg">Resting Electrocardiographic Results (restecg):</label>
+                <input type="text" id="restecg" name="restecg"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="thalach">Maximum Heart Rate Achieved (thalach):</label>
+                <input type="text" id="thalach" name="thalach"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="exang">Exercise Induced Angina (exang):</label>
+                <input type="text" id="exang" name="exang"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="oldpeak">Oldpeak (ST depression induced by exercise relative to rest):</label>
+                <input type="text" id="oldpeak" name="oldpeak"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="slope">Slope of the Peak Exercise ST Segment (slope):</label>
+                <input type="text" id="slope" name="slope"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="ca">Number of Major Vessels Colored by Fluoroscopy (ca):</label>
+                <input type="text" id="ca" name="ca"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="thal">Thalassemia (thal):</label>
+                <input type="text" id="thal" name="thal"><br>
+            </div>
+
+            <button type="submit" class="submit-button" value="Predict">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        <h1>{{answer}}</h1>
+    </div>
+</body>
+
+</html>
